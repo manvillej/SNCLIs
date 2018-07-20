@@ -34,10 +34,11 @@ def main(filename):
 		else:
 			print(f'Error with row {index}: {response.status_code}')
 
-	with pd.ExcelWriter('templates_output.xlsx') as writer:
-		templates.to_excel(writer, 'Sheet1')
-		writer.save()
+	return templates
 
 if __name__ == '__main__':
 	filename = 'template_test.xlsx'
-	main(filename)
+	templates = main(filename)
+	with pd.ExcelWriter('templates_output.xlsx') as writer:
+		templates.to_excel(writer, 'Sheet1')
+		writer.save()
