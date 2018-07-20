@@ -43,8 +43,7 @@ class SNREST(object):
         if(not response.ok):
             raise requests.HTTPError(response=response)
         
-        results = response.json()['result']
-        return results
+        return response
 
     def create_record(self, table, payload):
         """"""

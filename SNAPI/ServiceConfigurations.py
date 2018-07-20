@@ -18,7 +18,7 @@ plumbing = Service(
 	"72eddb326f75e240c306511bbb3ee443",)
 
 vendors = {
-	"ENE":"1234",
-	"SIEMENS":"1234",
+	"ENE":"place holder",
+	"SIEMENS":"place holder",
 	"NO VENDOR":"",
 }
