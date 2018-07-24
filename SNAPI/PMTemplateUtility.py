@@ -53,7 +53,7 @@ class TemplateUtility(object):
         template_name = task_code + " " + task_code_description 
         return template_name[:100]
 
-    def get_template_payload(self, ):
+    def get_template_payload(self):
         payload = {
             "user":"",
             "global":True,
@@ -91,7 +91,7 @@ class TemplateUtility(object):
     def get_pm_service_info(self, service):
         configurations = {
             "PM HVAC":hvac,
-            "PM Life Safety":"",
+            "PM Life Safety":life_safety,
             "PM Plumbing":plumbing
         }
 
