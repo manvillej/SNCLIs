@@ -18,7 +18,6 @@ class TemplateUtility(object):
         title = kwargs.pop("title", False)
 
 
-
         if(code and description and service and vendor and month and day_of_week and title):
             self.payload["name"] = self.get_template_name(code, description)
             self.payload["template"] = self.create_template(
@@ -45,13 +44,10 @@ class TemplateUtility(object):
                 """)
 
 
-
-
-
     def get_template_name(self, task_code, task_code_description):
         """"""
         template_name = task_code + " " + task_code_description 
-        return template_name[:100]
+        return template_name[:40]
 
     def get_template_payload(self):
         payload = {
